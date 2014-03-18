@@ -14,7 +14,6 @@
 
 /* Space out content a bit */
 body {
-    padding-bottom: 20px;
     font-family: @font;
     font-weight: 100;
 }
@@ -26,7 +25,7 @@ body {
     text-align: center;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075);
     // background: linear-gradient(45deg, #020031 0%, #6D3353 100%) repeat scroll 0% 0% transparent;
-    // box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2) inset, 0px -3px 7px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2) inset, 0px -3px 7px rgba(0, 0, 0, 0.2) inset;
 
     &.masthead {
         padding: 70px 0px 80px;
@@ -46,6 +45,11 @@ body {
             font-size: 72px;
         }
 
+        h2, h3 {
+            font-family: @font;
+            font-weight: 300;
+        }
+
         &:after {
             content: "";
             display: block;
@@ -55,13 +59,24 @@ body {
             bottom: 0px;
             left: 0px;
             background: url('/images/band_cover.jpg') repeat scroll center center;
-            // background-size: 100%;
             -webkit-background-size: cover;
             background-size: cover;
             background-position: 9% 55%;
             opacity: 0.8;
         }
     }
+
+    &.masthead#release { &:after { 
+        background: url('/images/release_cover.jpg') repeat scroll center center; 
+        // background-position: 9% 55%;
+        // opacity: 0.8;
+    } }
+
+    &.masthead#social { &:after { 
+        background: url('/images/band_cover.jpg') repeat scroll center center; 
+        // background-position: 9% 55%;
+        // opacity: 0.8;
+    } }
     
     .container {
         position: relative;
@@ -77,4 +92,22 @@ body {
   height: 100px;
   border: none;
   overflow: hidden;
+}
+
+.rainbow {
+    background:
+        linear-gradient(
+            45deg,
+            rgba(105,94,127,1) 0%,
+            rgba(255,92,92,1) 15%,
+            rgba(255,160,17,1) 27%,
+            rgba(252,236,93,1) 37%,
+            rgba(255,229,145,1) 46%,
+            rgba(111,196,173,1) 58%,
+            rgba(106,132,186,1) 69%,
+            rgba(209,119,195,1) 79%,
+            rgba(216,213,125,1) 89%,
+            rgba(216,213,125,1) 100%
+        ),
+        repeat scroll 0% 0% transparent;
 }
