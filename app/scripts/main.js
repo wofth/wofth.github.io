@@ -9,4 +9,6 @@ $(document).ready(function () {
 	__konami__.enable(function(){
         $('#home,#release,#social').addClass('rainbow');
     }, { replay: false });
+
+    $('.carousel').carousel();
 });
