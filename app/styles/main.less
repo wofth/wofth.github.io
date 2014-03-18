@@ -72,8 +72,8 @@ body {
         // opacity: 0.8;
     } }
 
-    &.masthead#social { &:after { 
-        background: linear-gradient(45deg, #020031 0%, #6D3353 100%) repeat scroll 0% 0% transparent;
+    &.masthead#contact { &:after { 
+        background: linear-gradient(45deg, #666 0%, #000 100%) repeat scroll 0% 0% transparent;
         background-position: 9% 55%;
         opacity: 0.4;
     } }
@@ -86,13 +86,12 @@ body {
 
 .carousel {
     z-index: 5;
+
     .carousel-inner {
-        .item {
-            img {
-                -webkit-background-size: cover;
-                background-size: cover;
-                background-position: 9% 55%;
-            }
+        .item.full-height {
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
         }
     }
 
@@ -103,8 +102,7 @@ body {
 
     .carousel-control {
         font-size: 200px;
-
-        top: 35% !important;
+        top: 30% !important;
     }
 }
 
