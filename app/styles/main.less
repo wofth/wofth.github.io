@@ -1,9 +1,11 @@
 
 // bower:less
 @import 'bootstrap/less/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
 // endbower
 
-@font: "HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue",Arial,Helvetica,sans-serif;
+// @font: "HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue",Arial,Helvetica,sans-serif;
+@font: "Berkshire Swash",Arial;
 
 .browsehappy {
     margin: 0.2em 0;
@@ -37,8 +39,6 @@ body {
             line-height: 1;
             letter-spacing: -2px;
 
-            margin-top: 40%;
-
             color: #fff;
             font-family: @font;
             font-weight: 300;
@@ -66,6 +66,32 @@ body {
         }
     }
 
+    &.masthead#home {
+        h1 {
+            margin-top: 40%;
+        }
+    }
+
+    &.masthead#ep {
+        h2 {
+            margin-top: 6%;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            color: #000;
+        }
+
+        &:after { 
+            background: #fff url('/images/ep.jpg') no-repeat scroll center center; 
+            background-position: left center;
+
+            -webkit-background-size: 50%;
+            background-size: 50%;
+            // opacity: 0.8;
+        }
+    }
+
     &.masthead#release { &:after { 
         background: url('/images/release_cover.jpg') repeat scroll center center; 
         // background-position: 9% 55%;
@@ -74,7 +100,7 @@ body {
 
     &.masthead#contact { &:after { 
         background: linear-gradient(45deg, #666 0%, #000 100%) repeat scroll 0% 0% transparent;
-        background-position: 9% 55%;
+        // background-position: 9% 55%;
         opacity: 0.4;
     } }
     
