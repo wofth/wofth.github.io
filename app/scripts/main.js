@@ -17,15 +17,15 @@ $(document).ready(function () {
     $('.carousel').carousel();
 
     // One page Scroll
- //    $('.holder').onepage_scroll({
-	// 	sectionContainer: '.section',
-	// 	easing: 'ease',
-	// 	animationTime: 1000,
-	// 	pagination: true,
-	// 	updateURL: true,
-	// 	keyboard: true,
-	// 	responsiveFallback: false
-	// });
+    $('.holder').onepage_scroll({
+		sectionContainer: '.section',
+		easing: 'ease',
+		animationTime: 1000,
+		pagination: true,
+		updateURL: true,
+		keyboard: true,
+		responsiveFallback: false
+	});
 
 	// Youtube videos gallery
 	var youtubeHolder = $('#youtube_gallery');
