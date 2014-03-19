@@ -1,32 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
 
 // bower:less
 @import 'bootstrap/less/bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
 // endbower
 
-// @font: "HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue",Arial,Helvetica,sans-serif;
-@font: "Berkshire Swash",Arial;
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+// override bootstrap defaults
+@font-family-base: "Berkshire Swash",Arial;
+@font-family-secondary: "HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue",Arial,Helvetica,sans-serif;
+@link-color: rgba(0,0,0,1);
 
 /* Space out content a bit */
 body {
-    font-family: @font;
+    font-family: @font-family-base;
     font-weight: 100;
 }
 
-.jumbotron {
+.section {
     position: relative;
     padding: 40px 0px;
     color: #FFF;
     text-align: center;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075);
-    // background: linear-gradient(45deg, #020031 0%, #6D3353 100%) repeat scroll 0% 0% transparent;
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2) inset, 0px -3px 7px rgba(0, 0, 0, 0.2) inset;
 
     &.masthead {
@@ -40,13 +34,13 @@ body {
             letter-spacing: -2px;
 
             color: #fff;
-            font-family: @font;
+            font-family: @font-family-base;
             font-weight: 300;
             font-size: 72px;
         }
 
         h2, h3 {
-            font-family: @font;
+            font-family: @font-family-base;
             font-weight: 300;
         }
 
@@ -66,13 +60,13 @@ body {
         }
     }
 
-    &.masthead#home {
+    &#home {
         h1 {
             margin-top: 40%;
         }
     }
 
-    &.masthead#ep {
+    &#ep {
         h2 {
             margin-top: 6%;
             margin-bottom: 20px;
@@ -91,14 +85,35 @@ body {
         }
     }
 
-    &.masthead#release { &:after {
-        background: url('/images/release_cover.jpg') repeat scroll center center;
-    } }
+    &#release {
+        &:after {
+            background: url('/images/release_cover.jpg') repeat scroll center center;
+        }
 
-    &.masthead#contact { &:after {
-        background: #666 url('/images/contact.png') repeat scroll 0% 0%;
-        opacity: 0.8;
-    } }
+        #youtube_gallery {
+            a {
+                display: block;
+                color: #fff;
+                font-family: @font-family-secondary;
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 20px;
+
+                &:hover { text-decoration: none; }
+            }
+        }
+    }
+
+    &#gallery {
+        padding: 0;
+    }
+
+    &#contact {
+        &:after {
+            background: #666 url('/images/contact.png') repeat scroll 0% 0%;
+            opacity: 0.8;
+        }
+    }
 
     .container {
         position: relative;
