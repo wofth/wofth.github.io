@@ -4,7 +4,9 @@
   "dependencies": {
     "bootstrap": "~3.0.3",
     "jquery": "~1.11.0",
-    "konami": "~0.0.1"
+    "konami": "~0.0.1",
+    "onepage-scroll": "~v1.1.1",
+    "font-awesome": "~4.0.3"
   },
   "devDependencies": {}
 }

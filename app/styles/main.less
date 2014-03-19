@@ -82,28 +82,24 @@ body {
             color: #000;
         }
 
-        &:after { 
-            background: #fff url('/images/ep.jpg') no-repeat scroll center center; 
+        &:after {
+            background: #fff url('/images/ep.jpg') no-repeat scroll center center;
             background-position: left center;
 
             -webkit-background-size: 50%;
             background-size: 50%;
-            // opacity: 0.8;
         }
     }
 
-    &.masthead#release { &:after { 
-        background: url('/images/release_cover.jpg') repeat scroll center center; 
-        // background-position: 9% 55%;
-        // opacity: 0.8;
+    &.masthead#release { &:after {
+        background: url('/images/release_cover.jpg') repeat scroll center center;
     } }
 
-    &.masthead#contact { &:after { 
-        background: linear-gradient(45deg, #666 0%, #000 100%) repeat scroll 0% 0% transparent;
-        // background-position: 9% 55%;
-        opacity: 0.4;
+    &.masthead#contact { &:after {
+        background: #666 url('/images/contact.png') repeat scroll 0% 0%;
+        opacity: 0.8;
     } }
-    
+
     .container {
         position: relative;
         z-index: 2;
@@ -128,18 +124,32 @@ body {
 
     .carousel-control {
         font-size: 200px;
-        top: 30% !important;
+        line-height: 300%;
     }
 }
 
+#contact {
+    .container {
+        a {
+            color: #fff;
+            font-size: 48px;
+            margin: 0 10px;
+        }
+    }
+}
+
+.onepage-pagination {
+    top: 43% !important;
+}
+
 .facebooklike {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 5;
-  height: 100px;
-  border: none;
-  overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    height: 100px;
+    border: none;
+    overflow: hidden;
 }
 
 .rainbow {
