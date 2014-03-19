@@ -54,6 +54,7 @@ $(document).ready(function () {
 				youtubeHolder.append(html);
 				i++;
 			});
+
 			$('.fancybox-media').fancybox({
 				openEffect  : 'fade',
 				closeEffect : 'fade',

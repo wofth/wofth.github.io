@@ -139,7 +139,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-    
+
     // Compiles LESS to CSS and generates necessary files if requested
         less: {
             options: {
@@ -313,7 +313,8 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/bootstrap/fonts/*.*'
+                        'bower_components/bootstrap/fonts/*.*',
+                        'bower_components/font-awesome/fonts/*.*'
                     ]
                 }]
             },
