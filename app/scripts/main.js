@@ -44,10 +44,10 @@ $(document).ready(function () {
 					description = this.media$group.media$description.$t,
 					title = this.media$group.media$title.$t;
 
-				var html = '<div class="col-xs-3 text-center">';
+				var html = '<div class="col-xs-3 text-center video">';
 					html += '<a href="'+url+'" class="fancybox-media">';
 					html += '<div align="center"><img src="'+url_thumbnail+'" alt="'+description+'" class="img-responsive" /></div>';
-					html += title;
+					html += '<span class="hidden-xs">'+title+'</span>';
 					html += '</a>';
 					html += '</div>';
 
