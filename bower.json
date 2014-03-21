@@ -4,10 +4,9 @@
   "dependencies": {
     "bootstrap": "~3.1.1",
     "jquery": "~1.11.0",
-    "konami": "~0.0.1",
     "onepage-scroll": "~v1.1.1",
     "font-awesome": "~4.0.3",
-    "fancybox": "~2.1.5"
+    "magnific-popup": "~0.9.9"
   },
   "devDependencies": {}
 }

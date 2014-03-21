@@ -1,5 +1,5 @@
 'use strict';
-var __konami__;
+var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
 
 // Fixing height
 $(window).on('load', function () {
@@ -8,24 +8,21 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function () {
-	// Vini Konami
-	__konami__.enable(function(){
-        $('#home,#release,#ep,#gallery,#contact').addClass('rainbow');
-    }, { replay: false });
-
 	// Gallery
     $('.carousel').carousel();
 
     // One page Scroll
-    $('.holder').onepage_scroll({
-		sectionContainer: '.section',
-		easing: 'ease',
-		animationTime: 1000,
-		pagination: true,
-		updateURL: true,
-		keyboard: true,
-		responsiveFallback: false
-	});
+    if(!isMobile) {
+	    $('.holder').onepage_scroll({
+			sectionContainer: '.section',
+			easing: 'ease',
+			animationTime: 1000,
+			pagination: true,
+			updateURL: true,
+			keyboard: true,
+			responsiveFallback: true
+		});
+	}
 
 	// Youtube videos gallery
 	var youtubeHolder = $('#youtube_gallery');
@@ -45,7 +42,7 @@ $(document).ready(function () {
 					title = this.media$group.media$title.$t;
 
 				var html = '<div class="col-xs-3 text-center video">';
-					html += '<a href="'+url+'" class="fancybox-media">';
+					html += '<a href="'+url.replace('&feature=youtube_gdata', '')+'" class="fancybox-media" target="_blank">';
 					html += '<div align="center"><img src="'+url_thumbnail+'" alt="'+description+'" class="img-responsive" /></div>';
 					html += '<span class="hidden-xs">'+title+'</span>';
 					html += '</a>';
@@ -55,13 +52,9 @@ $(document).ready(function () {
 				i++;
 			});
 
-			$('.fancybox-media').fancybox({
-				openEffect  : 'fade',
-				closeEffect : 'fade',
-				helpers : {
-					media : {}
-				}
-			});
+			$('.fancybox-media').magnificPopup({type:'iframe'});
 	  	}
 	});
+
+	$('.fancybox-media').magnificPopup({type:'iframe'});
 });

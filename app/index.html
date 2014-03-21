@@ -16,12 +16,17 @@
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Watch out for the Hounds"/>
+        <meta property="og:title" content="Watch out for the Hounds"/>
+        <meta property="og:image" content="/images/ep.jpg"/>
+
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/onepage-scroll/onepage-scroll.css" />
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-        <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" />
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -40,10 +45,19 @@
             </div>
 
             <div class="section jumbotron masthead" id="ep">
-                <div class="container text-right">
-                    <h2>Confira uma prévia do nosso primeiro EP</h2>
+                <div class="container">
+                    <div class="col-xs-6 text-left">
+                        <h3>Assista em breve o clip de Not Far Enough</h3>
+                        <p>dirigido por Virgínia de Ferrante e Raphael Borghi</p>
 
-                    <iframe width="40%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/140072216&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+                        <img src="/images/ep.jpg" alt="EP" width="500px">
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p></p>
+                        <p class="font-primary">Enquanto damos os últimos retoques em nosso primeiríssimo EP, Release the Hounds, confira uma singela prévia do que estamos cozinhando!</p>
+
+                        <iframe width="350" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/140072216&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -62,22 +76,13 @@
             </div>
 
             <div class="section carousel slide" id="gallery">
-                <!-- <ol class="carousel-indicators">
-                    <li data-target="#gallery" data-slide-to="0" class="active"></li>
-                    <li data-target="#gallery" data-slide-to="1"></li>
-                    <li data-target="#gallery" data-slide-to="2"></li>
-                    <li data-target="#gallery" data-slide-to="3"></li>
-                </ol> -->
-
-                <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="item full-height active" style="background-image:url('/images/1.jpg');"></div>
-                    <div class="item full-height" style="background-image:url('/images/2.jpg');"></div>
+                    <div class="item full-height" style="background-image:url('/images/2.jpg'); background-size:90%;"></div>
                     <div class="item full-height" style="background-image:url('/images/3.jpg');"></div>
                     <div class="item full-height" style="background-image:url('/images/4.jpg');"></div>
                 </div>
 
-                <!-- Carousel nav -->
                 <a class="carousel-control left" href="#gallery" data-slide="prev">&lsaquo;</a>
                 <a class="carousel-control right" href="#gallery" data-slide="next">&rsaquo;</a>
             </div>
@@ -86,7 +91,7 @@
                 <div class="container">
                     <h1>Fale com os Hounds</h1>
 
-                    <p>Gostou de nós, quer add, chamar pra tocar ou beber, liga nóis</p>
+                    <p>Gostou da gente, quer chamar pra tocar, colaborar ou beber? Give us a shout!</p>
                     <br>
 
                     <p>wofthounds@gmail.com</p>
@@ -119,22 +124,11 @@
             </script>
 
             <!-- build:js scripts/plugins.js -->
-            <script src="bower_components/bootstrap/js/affix.js"></script>
-            <script src="bower_components/bootstrap/js/alert.js"></script>
-            <script src="bower_components/bootstrap/js/dropdown.js"></script>
-            <script src="bower_components/bootstrap/js/tooltip.js"></script>
-            <script src="bower_components/bootstrap/js/modal.js"></script>
             <script src="bower_components/bootstrap/js/transition.js"></script>
-            <script src="bower_components/bootstrap/js/button.js"></script>
-            <script src="bower_components/bootstrap/js/popover.js"></script>
             <script src="bower_components/bootstrap/js/carousel.js"></script>
             <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-            <script src="bower_components/bootstrap/js/collapse.js"></script>
-            <script src="bower_components/bootstrap/js/tab.js"></script>
-            <script src="bower_components/konami/konami.js"></script>
             <script src="bower_components/onepage-scroll/jquery.onepage-scroll.min.js"></script>
-            <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
-            <script src="bower_components/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+            <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
             <!-- endbuild -->
 
             <!-- build:js({app,.tmp}) scripts/main.js -->
