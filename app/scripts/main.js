@@ -2,7 +2,9 @@
 
 // Fixing height
 $(window).on('load', function () {
-	$('.jumbotron.masthead').css('height', $(this).innerHeight());
+	if($(window).innerWidth() >= 768) {
+		$('.jumbotron.masthead').css('height', $(this).innerHeight());
+	}
 	$('.full-height').css('height', $(this).innerHeight());
 });
 
@@ -11,15 +13,17 @@ $(document).ready(function () {
     $('.carousel').carousel();
 
     // One page Scroll
-    $('.holder').onepage_scroll({
-		sectionContainer: '.section',
-		easing: 'ease',
-		animationTime: 1000,
-		pagination: true,
-		updateURL: true,
-		keyboard: true,
-		responsiveFallback: true
-	});
+    if($(window).innerWidth() >= 768) {
+	    $('.holder').onepage_scroll({
+			sectionContainer: '.section',
+			easing: 'ease',
+			animationTime: 1000,
+			pagination: true,
+			updateURL: true,
+			keyboard: true,
+			responsiveFallback: true
+		});
+	}
 
 	// Youtube videos gallery
 	var youtubeHolder = $('#youtube_gallery');
