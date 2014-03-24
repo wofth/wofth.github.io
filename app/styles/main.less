@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,500,700);
 
 // bower:less
 @import 'bootstrap/less/bootstrap';
@@ -6,7 +7,7 @@
 
 // override bootstrap defaults
 @font-family-base: "Berkshire Swash",Arial;
-@font-family-secondary: "HelveticaNeue-UltraLight","Helvetica Neue UltraLight","Helvetica Neue",Arial,Helvetica,sans-serif;
+@font-family-secondary: "Alegreya Sans",Arial,Helvetica,sans-serif;
 @link-color: rgba(0,0,0,1);
 
 /* Space out content a bit */
@@ -74,6 +75,10 @@ p {
     }
 
     &#ep {
+        -webkit-text-shadow: none;
+        -moz-text-shadow: none;
+        text-shadow: none;
+
         h2 {
             margin-top: 6%;
             margin-bottom: 20px;
@@ -100,15 +105,17 @@ p {
         }
 
         #youtube_gallery {
+            height: 250px;
+
             .video {
-                height: 160px;
+                height: 250px;
 
                 a {
                     display: block;
                     color: #fff;
                     font-family: @font-family-secondary;
-                    font-weight: 300;
-                    font-size: 14px;
+                    font-weight: 500;
+                    font-size: 16px;
                     margin-bottom: 10px;
 
                     &:hover { text-decoration: none; }
@@ -152,12 +159,43 @@ p {
     }
 }
 
+.carousel-control.no-shadow {
+    background: none !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
 #contact {
     .container {
-        a {
-            color: #fff;
-            font-size: 48px;
-            margin: 0 10px;
+        h3 {
+            font-size: 72px;
+            letter-spacing: -2px;
+        }
+
+        p {
+
+        }
+
+        .contact-address {
+            font-size: 32px;
+            font-family: @font-family-base;
+        }
+
+        .osspower {
+            cursor: wait;
+            margin-top: 50px;
+            display: block;
+        }
+
+        .social-icons {
+            padding-top: 2em;
+
+            a {
+                color: #fff;
+                font-size: 48px;
+                margin: 0 10px;
+            }
         }
     }
 }
@@ -166,10 +204,10 @@ p {
     top: 43% !important;
 }
 
-.facebooklike {
+.facebook-like {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 40px;
+    left: 40px;
     z-index: 5;
     height: 100px;
     border: none;

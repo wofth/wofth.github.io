@@ -20,11 +20,15 @@
         <meta property="og:site_name" content="WATCH OUT for the HOUNDS"/>
         <meta property="og:title" content="WATCH OUT for the HOUNDS"/>
 
+        <!-- build:js scripts/vendor.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/detectizr/dist/detectizr.js"></script>
+        <!-- endbuild -->
+
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/onepage-scroll/onepage-scroll.css" />
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
         <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" />
         <!-- endbower -->
         <!-- endbuild -->
@@ -36,14 +40,14 @@
     <body>
         <div class="holder">
             <div class="section jumbotron masthead" id="home">
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FWatchOutForTheHounds&amp;width=30px&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=65&amp;appId=253611168115042" scrolling="no" frameborder="0" allowTransparency="true" class="facebook-like"></iframe>
+
                 <div class="container">
                     <h1>Watch Out For the Hounds</h1>
-
-                    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FWatchOutForTheHounds&amp;width=30px&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=65&amp;appId=253611168115042" scrolling="no" frameborder="0" allowTransparency="true" class="facebooklike"></iframe>
                 </div>
             </div>
 
-            <div class="section jumbotron masthead" id="ep">
+            <div class="section jumbotron masthead hidden-xs" id="ep">
                 <div class="container">
                     <div class="col-xs-6 text-left">
                         <h3>Assista em breve o clip de Not Far Enough</h3>
@@ -60,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="section jumbotron masthead" id="release">
+            <div class="section jumbotron masthead hidden-xs" id="release">
                 <div class="container text-left">
                     <div class="row">
                         <div class="col-xs-12">
@@ -70,37 +74,59 @@
                             <p>Sem perder jamais o sarcasmo, a blasfêmia e os uivos para a lua.</p>
                         </div>
                     </div>
-                    <div class="row" id="youtube_gallery"></div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="ytcarousel">
+                                <div class="carousel-inner" id="youtube_gallery">
+                                </div>
+
+                                <a class="carousel-control left" href="#gallery" data-slide="prev">&lsaquo;</a>
+                                <a class="carousel-control right" href="#gallery" data-slide="next">&rsaquo;</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="section carousel slide" id="gallery">
+            <div class="section carousel slide hidden-xs" id="gallery">
                 <div class="carousel-inner">
                     <div class="item full-height active" style="background-image:url('/images/1.jpg');"></div>
                     <div class="item full-height" style="background-image:url('/images/2.jpg'); background-size:90%;"></div>
                     <div class="item full-height" style="background-image:url('/images/3.jpg');"></div>
                     <div class="item full-height" style="background-image:url('/images/4.jpg');"></div>
+                    <div class="item full-height" style="background-image:url('/images/5.jpg'); background-size:80%;"></div>
+                    <div class="item full-height" style="background-image:url('/images/6.jpg'); background-size:80%;"></div>
+                    <div class="item full-height" style="background-image:url('/images/7.jpg');"></div>
+                    <div class="item full-height" style="background-image:url('/images/8.jpg');"></div>
+                    <div class="item full-height" style="background-image:url('/images/9.jpg');"></div>
+                    <div class="item full-height" style="background-image:url('/images/10.jpg');"></div>
                 </div>
 
-                <a class="carousel-control left" href="#gallery" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#gallery" data-slide="next">&rsaquo;</a>
+                <a class="carousel-control no-shadow left" href="#gallery" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control no-shadow right" href="#gallery" data-slide="next">&rsaquo;</a>
             </div>
 
             <div class="section jumbotron masthead" id="contact">
                 <div class="container">
-                    <h1>Fale com os Hounds</h1>
-
+                    <h3>Fale com os Hounds</h3>
                     <p>Gostou da gente, quer chamar pra tocar, colaborar ou beber? Give us a shout!</p>
-                    <br>
+                    <p class="contact-address">wofthounds@gmail.com</p>
 
-                    <p>wofthounds@gmail.com</p>
+                    <hr>
 
-                    <br><hr><br>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/WatchOutForTheHounds" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/wofthounds" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://youtube.com/wofthounds" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="https://instagram.com/wofthounds" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://soundcloud.com/wofthounds" target="_blank"><i class="fa fa-cloud"></i></a>
+                        <a href="https://wofthounds.bandcamp.com" target="_blank"><i class="fa fa-play-circle"></i></a>
+                    </div>
 
-                    <a href="https://www.facebook.com/WatchOutForTheHounds" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/wofthounds" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://youtube.com/wofthounds" target="_blank"><i class="fa fa-youtube"></i></a>
-                    <a href="https://instagram.com/wofthounds" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://github.com/wofth" class="osspower">
+                        <img src="/images/diabinho.png" alt="osspower" />
+                    </a>
                 </div>
             </div>
 
